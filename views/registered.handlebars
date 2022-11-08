@@ -1,0 +1,28 @@
+{{!-- Registering page --}}
+<div class="form-popup" id="myRegistering">
+  <form action="/register" class="form-container">
+    <h1>PLEASE REGISTER HERE </h1>
+
+    <label for="email"><b>Name</b></label>
+    <input type="text" placeholder="Enter Email" name="uname" required>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <button type="submit" class="btn">Register</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function registeringForm() {
+  document.getElementById("myRegistering").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myRegistering").style.display = "none";
+}
+</script>
+
+
+{{!-- end of Registering page --}}

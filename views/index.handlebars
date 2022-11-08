@@ -1,0 +1,120 @@
+
+
+
+<div class="topnav">
+  <a href="/registered"><button class="open-button" onclick="registeringForm()">REGISTER</button></a>
+  <a href="#contact"><button>Contact</button></a>
+  <a href="#about"><button>About Us</button></a>
+  <a href="/login"></a> <button class="open-button" onclick="loginForm()">Login</button>
+</div>
+
+
+<h1 class="heading">SNEAKERS CATALOGUE</h1>
+
+
+<h4 class="error"> {{messages.error}}</h4>
+<h3 class="success"> {{messages.success}}</h3>
+
+
+{{!-- contact page --}}
+<div class="form-popup" id="myForm">
+  <form action="contact" class="form-container">
+    <h1>Login</h1>
+    <h3></h3>
+  
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function loginForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+
+
+
+
+
+
+{{!-- slide show of shoes --}}
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="css/images.jpeg" style="width:30%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="css/pinked.jpg" style="width:30%">
+</div>
+
+<div class="mySlides fade">
+  <img src="css/nike.jpg" style="width:30%">
+</div>
+
+<div class="mySlides fade">
+  <img src="css/brown.jpg" style="width:30%">
+</div>
+
+<div class="mySlides fade">
+  <img src="css/blue.jpg" style="width:30%">
+</div>
+
+<div class="mySlides fade">
+  <img src="css/meme.jpg" style="width:30%">
+</div>
+
+<div class="mySlides fade">
+  <img src="css/sneaker.jpg" style="width:30%">
+</div>
+
+<div class="mySlides fade">
+  <img src="css/image.jpeg" style="width:30%">
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+   <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+   <span class="dot"></span> 
+   <span class="dot"></span> 
+   <span class="dot"></span> 
+</div>
+
+
+    <script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 4000); // Change image every 2 seconds
+}
+</script>
+{{!-- end of slide show --}}

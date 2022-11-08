@@ -1,0 +1,42 @@
+
+<div class="topnav">
+  <a href="/"><button class="open-button" onclick="registeringForm()">Home</button></a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About Us</a>
+ <a href="#about"> <button class="open-button" onclick="loginForm()">Login</button>
+</div>
+
+
+{{!-- login page --}}
+<div class="form-popup" id="myForm">
+  <form action="/login" class="form-container">
+    <h1>Login</h1>
+
+    <label for="email"><b>Name</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function loginForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+
+{{!-- end of login page --}}
+
+
